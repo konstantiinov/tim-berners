@@ -2,14 +2,22 @@
   padding: 0;
   margin: 0;
 }
+body {
+  border: lightgray 0.5px;
+}
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #071c2e;
   padding: 10px;
   color: white;
+  width: 100%;
+  margin-right: 2px;
 }
 
 .nav-button {
@@ -30,14 +38,15 @@
 }
 
 .custom-button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 0;
-  padding: 5px 10px;
-  display: flex;
-  align-items: center;
+  display: inline-block;
   cursor: pointer;
+  color: #14599d;
+  background: transparent;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  margin: 0 auto;
 }
 
 .button-text {
@@ -61,9 +70,17 @@ nav {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 40%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 2px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 70%;
+  margin-left: 20px;
+  float: right;
+  box-sizing: border-box;
+
+  max-height: 100%;
 }
 
 .subscribe-button {
@@ -72,6 +89,7 @@ nav {
   padding: 5px 10px;
   border: none;
   border-radius: 7px;
+  margin-right: 20px;
 }
 
 .icon-container {
@@ -88,15 +106,20 @@ nav {
 .word {
   word-spacing: 20x;
   color: grey;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 100;
 }
 
 .greater-than {
   margin: 0 20px;
   font-size: 80%;
   color: black;
+  font-weight: 300;
 }
 h3 {
   font-size: 16px;
+  padding-top: 70px;
 }
 .science-button {
   background-color: #fed7aa;
@@ -104,6 +127,7 @@ h3 {
   padding: 5px 10px;
   border: none;
   border-radius: 15px;
+  margin-top: 20px;
 }
 .action-section {
   display: flex;
@@ -119,8 +143,137 @@ h3 {
   font-size: 20px;
   margin-right: 5px;
   padding: 1px;
+  align-items: center;
+  cursor: pointer;
+  color: #14599d;
+  margin: 0.5px;
+
+  background: transparent;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 12px;
 }
 .user-icons i {
   font-size: 24px;
   margin-right: 5px;
+}
+.list-section {
+  display: flex;
+  align-items: center;
+  border: #555 1px solid;
+  justify-content: space-between;
+  width: 70px;
+  height: 30px;
+  padding: 2px;
+}
+.listen-section {
+  display: flex;
+  align-items: center;
+  border: #555 1px solid;
+  justify-content: space-between;
+  width: 350px;
+  height: auto;
+  padding: 2px;
+  color: black;
+}
+.image-container {
+  max-height: 40%;
+  max-width: 90%;
+  margin: 20px;
+}
+
+.caption {
+  padding: 5px;
+}
+.see-button {
+  border: none;
+  background: transparent;
+  color: darkblue;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-weight: bolder;
+}
+hr {
+  margin-right: 30px;
+  margin-left: 30px;
+  color: #ddd;
+  opacity: 0.8;
+}
+h4 {
+  margin: 0;
+  font-style: italic;
+  font-size: 12px;
+  color: #666666;
+}
+.biography {
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  line-height: 1.6;
+  font-family: "Georgia", serif;
+  font-size: 18px;
+}
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: #14599d;
+  margin: 0.5px;
+
+  background: transparent;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+}
+
+.icon-button i {
+  margin-right: 10px;
+}
+
+h1 {
+  font-family: "Georgia", serif;
+  font-size: 20px;
+  padding-top: 20px;
+}
+h2 {
+  font-family: "Georgia", serif;
+  font-weight: 100;
+  font-size: 16px;
+  padding-top: 2px;
+}
+.text-1 {
+  font-size: 12px;
+  color: #666666;
+  margin-top: 20px;
+}
+main {
+  overflow: hidden;
+}
+.image-container img {
+  max-height: 275px;
+  max-width: auto;
+
+  display: flex;
+  margin: 10px;
+  border-radius: 10px;
+}
+.print {
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 769px) {
+  /* Styles for screens 769px wide and above */
+  .container {
+    float: right;
+    margin-left: 20px;
+    max-width: fit-content;
+  }
+  main {
+    float: left;
+    margin: 20px;
+    max-width: fit-content;
+  }
 }
